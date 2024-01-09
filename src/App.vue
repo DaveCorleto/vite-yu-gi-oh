@@ -21,6 +21,13 @@ export default {
   methods: {
 
     getCallApi() {
+      // Mi creo una variabile per catturare la richiesta dell'utente. Se ha effettuato una ricerca allora myUrl cambierà 
+      let myUrl = store.apiUrl;
+
+      if (store.searchText !== "") {
+        myUrl += `?archetype=${store.searchText}`
+      }
+
       axios
         // Uso i parametri num e offset per snellire la risposta dell'api 
         .get(`${store.apiUrl}?num=${store.num}&offset=${store.offset}`)
@@ -46,12 +53,13 @@ export default {
 <template>
   <AppHeader />
   <AppSearch />
+
   <div class="row">
 
     <!-- Itero le card dal componente padre per farle Apparire tramite Props nel componente AppMainGallery  -->
 
     <AppMainGallery v-for="(singleCard, i) in store.galleryCard" :key="i" :archetipo="singleCard.archetype"
-      :singleCard.name="nameCard" :cardImg="singleCard.card_images[0].image_url" />
+      :nameCard="singleCard.name" :cardImg="singleCard.card_images[0].image_url" />
 
   </div>
 </template>
