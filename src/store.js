@@ -6,6 +6,6 @@ export const store = reactive({
     apiUrl: 'https://db.ygoprodeck.com/api/v7/cardinfo.php',
     num: 30, // Numero di elementi per pagina
     offset: 0, // Indice di partenza
-    // searchtext: "",
-    // loading: true,
+    searchText: ""
+
 });

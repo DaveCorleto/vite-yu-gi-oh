@@ -1,6 +1,13 @@
 <script>
+import { store } from '../store';
 export default {
     name: "AppSearch",
+    data() {
+        return {
+            store,
+            searchtext: '',
+        }
+    }
 }
 
 
@@ -10,7 +17,7 @@ export default {
 <template>
     <div class="container">
         <div class="search">
-            <input type="text" placeholder="search by archetype" id="search-by-archetype">
+            <input type="text" placeholder="search by archetype" v-model.trim="store.searchText" id="search-by-archetype">
             <button>SEARCH</button>
         </div>
     </div>

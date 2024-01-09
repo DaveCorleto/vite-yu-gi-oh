@@ -20,8 +20,8 @@ export default {
 
 <template>
     <div class="card">
-        <img :src="cardImg" :alt="cardIm">
-        <div class="title"> {{ nameCard }}</div>
+        <img :src="cardImg" alt="none">
+        <div class="title"> {{ nameCard }} </div>
         <div class="type"> {{ archetipo }} </div>
     </div>
 </template>
