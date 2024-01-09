@@ -1,7 +1,7 @@
 <script>
 import AppHeader from './components/AppHeader.vue';
 import AppMainGallery from './components/AppMainGallery.vue';
-import Loader from './components/Loader.vue';
+import AppSearch from './components/AppSearch.vue';
 import axios from 'axios';
 // Importo lo Store!  
 import { store } from './store';
@@ -11,7 +11,7 @@ export default {
   components: {
     AppHeader,
     AppMainGallery,
-    Loader
+    AppSearch
   },
   data() {
     return {
@@ -45,7 +45,7 @@ export default {
 
 <template>
   <AppHeader />
-  <Loader />
+  <AppSearch />
   <div class="row">
 
     <!-- Itero le card dal componente padre per farle Apparire tramite Props nel componente AppMainGallery  -->
