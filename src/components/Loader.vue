@@ -8,9 +8,21 @@ export default {
 </script>
 
 <template>
-    <div>
-        Sono Loader
+    <div class="container">
+        <div class="search">
+            <input type="text">
+            input type select
+            <button>SEARCH</button>
+        </div>
     </div>
 </template>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.container {
+    margin-top: 100px;
+
+    .search {
+        margin: auto;
+    }
+}
+</style>
